@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="PrimerSitio.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+ <style>
+     .caja
+     {
+         float:right;
+         background-color:darkgrey;
+         font-family:'Times New Roman', Times, serif;
+     }
+</style>
+</head>
+    
+<body>
+    <form id="form1" runat="server">
+        <img src="banner.jpg" width="100%" height="50" />
+        <br />
+        <asp:Menu ID="Menu1" runat="server" OnMenuItemClick="Menu1_MenuItemClick" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem NavigateUrl="~/EJERCICIO1.HTML" Text="Primera p&#225;gina" Value="Primera p&#225;gina"></asp:MenuItem>
+                <asp:MenuItem NavigateUrl="Registrar.aspx" Text="Registrar Usuario" Value="Registrar Usuario"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <br />
+        <div class="caja">
+        <table>
+            <tr>    
+                <td>
+                    Bienvenido
+                </td>
+                <td> <asp:Label ID="lblUsuario" runat="server" ></asp:Label> </td>
+            </tr>
+            <tr>
+                <td>Rol:</td>
+                <td>
+                    <asp:Label ID="lblRol" runat="server" Text="Label"></asp:Label> </td>
+            </tr>
+        </table>
+       </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        <br />
+
+        <img src="banner.jpg" height="80" width="100" />
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="PrimerSitio.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <img src="banner2.jpg" width="100%" height="100" />
+        <br />
+        <asp:Menu ID="Menu1" runat="server" Orientation="Horizontal">
+            <Items>
+                <asp:MenuItem NavigateUrl="Micuenta.aspx" Text="Mi cuenta" Value="Mi cuenta"></asp:MenuItem>
+            </Items>
+        </asp:Menu>
+        <br />  
+        <table>
+            <tr><%--fila--%>
+                <td> Bienvenido</td>
+                <td><asp:Label ID="lblUsuario" runat="server"
+                    Style="display:inline-block; width:150px; text-align:right; margin-right:10px;"></asp:Label> </td>
+            </tr>
+        </table>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
